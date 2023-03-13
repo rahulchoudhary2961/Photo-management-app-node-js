@@ -1,0 +1,28 @@
+<% include('../layouts/header.ejs')%>
+
+
+
+
+<% 
+
+if(typeof message !== 'undefined'){
+    %>
+
+    <h4><%= message %></h4>
+    <%
+}
+
+%>
+<div style="border:2px solid black ; width:50%; margin-left: 19%; height: 80%;">
+<form action="/login" method="POST" style="margin-left: 30%; padding:10px;">
+    <h1 style="margin-top: 8%;margin-left: 10%;">Login</h1>
+    <input type="email" name="email" placeholder="Enter Email" required style="margin-top: 7%;">
+    <br><br>
+    <input type="password" name="password" placeholder="Enter Password" required>
+    <br><br>
+    <input type="submit" value="Login" style="margin-left: 8%;">
+    
+</form>
+</div>
+
+<% include('../layouts/footer.ejs')%>

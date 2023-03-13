@@ -1,0 +1,42 @@
+<% include('../layouts/header.ejs')%>
+
+<link rel="stylesheet" href="./registration.css">
+
+
+
+<div class="form" style="border:2px solid black ; width:50%; margin-left: 19%; height: 60%;" >
+    
+<form action="/register" method="post" enctype="multipart/form-data" style="margin-left: 30%; padding:10px;">
+    <h1 style="margin-left:10%;">Sign Up</h1>
+    <span>Name :              </span>
+    <input type="text" name="name" placeholder="Enter Name" required>
+    <br><br>
+    <span>Your Email  :       </span>
+    <input type="email" name="email" placeholder="Enter Email" required>
+    <br><br>
+    <span>Mobile :            </span>
+    <input type="text" name="mno" placeholder="Enter Mobile" required>
+    <br><br>
+    <span>Upload Profile :    </span>
+    <input type="file" name="image" required>
+    <br><br>
+    <span>Password      :          </span>
+    <input type="password" name="password" placeholder="Enter Password" required>
+    <br><br>
+    <input type="submit" value="Register" style="margin-left:20%;">
+</form>
+</div>
+
+
+
+<% 
+
+if(typeof message !== 'undefined'){
+    %>
+        <p style="color:green"><%= message %></p>
+    <%
+}
+
+%>
+
+<% include('../layouts/footer.ejs')%>
